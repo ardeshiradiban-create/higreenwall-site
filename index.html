@@ -5,31 +5,36 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>HiGreenWall Toronto | Living Green Walls, Roof Gardens & Smart Irrigation</title>
-  <meta name="description" content="HiGreenWall designs, installs, and maintains living green walls, roof gardens, and smart irrigation systems in Toronto & the GTA. Premium finish, reliable performance, optional maintenance." />
-  <link rel="canonical" href="https://higreenwall.com/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="HiGreenWall Toronto | Living Green Walls & Smart Irrigation" />
-  <meta property="og:description" content="Living green wall installation, roof gardens and smart irrigation across Toronto & the GTA. Designed for Canada’s climate." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://higreenwall.com/" />
-  <meta property="og:image" content="https://higreenwall.com/assets/img/og-cover.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="Design, installation, and maintenance of living green walls, roof gardens, and smart irrigation systems across Toronto & the GTA." />
   <meta name="theme-color" content="#0b0f14" />
 
   <!-- SEO helpers -->
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="canonical" href="https://higreenwall.com/" />
 
-  <!-- LocalBusiness schema (add phone/address if you want) -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="HiGreenWall Toronto | Living Green Walls & Smart Irrigation" />
+  <meta property="og:description" content="Premium living green walls, roof gardens and smart irrigation across Toronto & the GTA. Designed for Canada’s climate." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://higreenwall.com/" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://higreenwall.com/assets/og-cover.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HiGreenWall Toronto | Living Green Walls & Smart Irrigation" />
+  <meta name="twitter:description" content="Premium living green walls, roof gardens and smart irrigation across Toronto & the GTA." />
+  <meta name="twitter:image" content="https://higreenwall.com/assets/og-cover.jpg" />
+
+  <!-- LocalBusiness schema (edit phone/email/address later) -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"HiGreenWall",
-    "url":"https://higreenwall.com",
-    "areaServed":["Toronto","GTA","Ontario","Canada"],
-    "description":"Living green wall design, installation and maintenance, roof gardens, and smart irrigation systems across Toronto & the GTA."
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "HiGreenWall",
+    "url": "https://higreenwall.com",
+    "areaServed": ["Toronto", "GTA", "Ontario", "Canada"],
+    "description": "Living green wall design, installation and maintenance, roof gardens, and smart irrigation systems across Toronto & the GTA."
   }
   </script>
 
@@ -39,934 +44,537 @@
       --panel:#0f1621;
       --soft:#0e141e;
       --text:#eaf0f7;
-      --muted:#b7c3d0;
+      --muted:#b7c3d6;
       --line:rgba(255,255,255,.10);
-      --brand:#22c55e;
-      --brand2:#06b6d4;
-      --shadow: 0 18px 60px rgba(0,0,0,.35);
-      --radius: 18px;
-      --radius2: 26px;
-      --max: 1120px;
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      --brand:#2cb34a;
+      --brand2:#00aeef;
+      --shadow:0 18px 60px rgba(0,0,0,.35);
+      --radius:18px;
+      --radius2:26px;
+      --max:1120px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:var(--font);
-      color:var(--text);
-      background:
-        radial-gradient(1200px 700px at 20% 10%, rgba(34,197,94,.18), transparent 55%),
-        radial-gradient(900px 600px at 90% 20%, rgba(6,182,212,.14), transparent 60%),
-        var(--bg);
-      line-height:1.55;
-    }
-    a{color:inherit; text-decoration:none}
-    img{max-width:100%; display:block}
-    .container{width:min(var(--max), calc(100% - 32px)); margin:0 auto}
-    .skip{position:absolute; left:-999px; top:auto}
-    .skip:focus{left:16px; top:16px; background:#111; padding:10px 12px; border-radius:10px; z-index:9999}
-
-    /* Motion (subtle, and respects reduced motion) */
-    .reveal{
-      opacity:0;
-      transform: translateY(10px);
-      transition: opacity .6s ease, transform .6s ease;
-      will-change: opacity, transform;
-    }
-    .reveal.is-in{
-      opacity:1;
-      transform:none;
-    }
-    @media (prefers-reduced-motion: reduce){
-      .reveal{opacity:1; transform:none; transition:none}
-      .btn:hover{transform:none}
-      .tile:hover{transform:none}
-    }
-
-    /* Header */
-    .header{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(14px);
-      background: rgba(11,15,20,.55);
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      background:rgba(11,15,20,.72);
+      backdrop-filter: blur(12px);
       border-bottom:1px solid var(--line);
     }
-    .header__inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .logo{display:flex; align-items:center; gap:10px}
-    .logo__mark{
-      width:14px; height:14px; border-radius:6px;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      box-shadow:0 0 0 6px rgba(34,197,94,.10);
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.2px}
+    .mark{
+      width:38px;height:38px;border-radius:12px;
+      background: radial-gradient(circle at 30% 30%, rgba(44,179,74,.95), rgba(0,174,239,.75));
+      box-shadow:0 0 0 1px rgba(255,255,255,.12) inset;
     }
-    .logo__text{font-weight:900; letter-spacing:.2px}
-    .nav{position:relative}
-    .nav__toggle{
-      display:none;
-      width:44px; height:44px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      border-radius:14px;
-      cursor:pointer;
-    }
-    .nav__toggle span{display:block; height:2px; background:rgba(234,240,247,.9); margin:7px 10px; border-radius:2px}
-    .nav__list{display:flex; gap:18px; align-items:center; list-style:none; padding:0; margin:0}
-    .nav__list a{color:rgba(234,240,247,.9)}
-    .nav__list a:hover{color:#fff}
-
-    /* Buttons */
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{color:var(--muted);font-weight:600;font-size:14px}
+    .nav-links a:hover{color:var(--text)}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:12px 16px;
-      border-radius:14px;
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:10px;padding:12px 16px;border-radius:14px;
       border:1px solid rgba(255,255,255,.14);
-      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(6,182,212,.85));
-      color:#061018;
-      font-weight:900;
-      box-shadow: 0 10px 30px rgba(34,197,94,.18);
+      background:rgba(255,255,255,.06);
+      color:var(--text);font-weight:700;
       cursor:pointer;
-      transition: transform .15s ease, filter .15s ease;
+      transition:transform .08s ease, background .2s ease, border-color .2s ease;
     }
-    .btn:hover{transform: translateY(-1px); filter: brightness(1.02)}
-    .btn--ghost{
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      box-shadow:none;
-    }
-    .btn--sm{padding:10px 12px; border-radius:12px; font-weight:900}
-
-    /* Typography */
-    h1,h2,h3{line-height:1.12; margin:0 0 10px}
-    h1{font-size:clamp(34px, 4vw, 56px)}
-    h2{font-size:clamp(26px, 3vw, 38px)}
-    h3{font-size:18px}
-    p{margin:0 0 12px}
-    .small{font-size:13px; color:var(--muted)}
-    .lead{font-size:18px; color:rgba(234,240,247,.88); max-width:64ch}
-
-    .pill{
-      display:inline-flex;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      color:rgba(234,240,247,.92);
-      font-size:13px;
-      width:fit-content;
-    }
-
-    /* Sections */
-    .section{padding:76px 0}
-    .section--soft{background: linear-gradient(180deg, transparent, rgba(255,255,255,.03), transparent)}
-    .section__head{max-width:820px; margin-bottom:28px}
-    .section__head--row{display:flex; align-items:flex-end; justify-content:space-between; gap:18px; max-width:none}
-
-    /* Hero */
-    .hero{position:relative; padding:78px 0 40px}
-    .hero__grid{
-      display:grid; grid-template-columns: 1.08fr .92fr;
-      gap:40px;
-      align-items:center;
-    }
-    .hero__cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
-    .trust{display:flex; gap:14px; flex-wrap:wrap; margin-top:24px}
-    .trust__item{
-      padding:12px 14px;
-      border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-    }
-    .trust__item strong{display:block}
-    .trust__item span{display:block; color:var(--muted); font-size:13px}
-
-    .glass{
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border-radius: var(--radius2);
-      padding:14px;
+    .btn:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.2)}
+    .btn:active{transform:translateY(1px)}
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, rgba(44,179,74,1), rgba(0,174,239,.95));
+      color:#07100b;
       box-shadow: var(--shadow);
+    }
+
+    .hero{padding:44px 0 26px}
+    .hero-grid{display:grid;grid-template-columns: 1.05fr .95fr;gap:26px;align-items:stretch}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:26px}
+    .kicker{display:inline-flex;gap:10px;align-items:center;font-weight:700;color:var(--muted);font-size:13px}
+    .dot{width:8px;height:8px;border-radius:99px;background:var(--brand)}
+    h1{margin:12px 0 10px;font-size:44px;line-height:1.05;letter-spacing:-.8px}
+    .sub{color:var(--muted);font-size:16px;line-height:1.6;margin:0 0 18px}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 10px;border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      color:var(--muted);font-weight:700;font-size:12px
+    }
+    .hero-right{padding:16px}
+    .mock{
+      height:100%;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
       overflow:hidden;
+      background:
+        radial-gradient(900px 420px at 20% 20%, rgba(44,179,74,.22), transparent 60%),
+        radial-gradient(900px 420px at 80% 30%, rgba(0,174,239,.18), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      position:relative;
+      min-height:360px;
     }
-    .glass__badge{
-      font-size:13px;
-      color:rgba(234,240,247,.9);
-      padding:10px 12px;
+    .mock .label{
+      position:absolute;left:16px;top:16px;
+      background:rgba(11,15,20,.55);
       border:1px solid rgba(255,255,255,.14);
-      background:rgba(0,0,0,.20);
-      border-radius: 999px;
-      width: fit-content;
+      padding:8px 10px;border-radius:999px;
+      font-size:12px;color:var(--muted);font-weight:700;
+      backdrop-filter: blur(10px);
     }
-    .glass__img{
-      height:340px;
-      border-radius: 22px;
-      margin-top:14px;
+    .mock .grid{
+      position:absolute;inset:0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 44px 44px;
+      opacity:.35;
+      mask-image: radial-gradient(circle at 30% 20%, rgba(0,0,0,1), rgba(0,0,0,.35) 50%, transparent 75%);
+    }
+    .mock .tiles{
+      position:absolute;left:18px;right:18px;bottom:18px;
+      display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+    }
+    .tile{
+      border-radius:16px;padding:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(11,15,20,.45);
+      backdrop-filter: blur(10px);
+      min-height:96px;
+    }
+    .tile b{display:block;font-size:13px}
+    .tile span{display:block;margin-top:6px;color:var(--muted);font-size:12px;line-height:1.35}
+
+    section{padding:26px 0}
+    .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px}
+    .sec-head h2{margin:0;font-size:26px;letter-spacing:-.3px}
+    .sec-head p{margin:0;color:var(--muted);max-width:560px;line-height:1.5}
+
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .p16{padding:16px}
+    .feature h3{margin:0 0 8px;font-size:16px}
+    .feature p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .shot{
+      aspect-ratio: 4/3;
+      border-radius:18px;
       border:1px solid rgba(255,255,255,.12);
       background:
-        radial-gradient(120px 160px at 35% 32%, rgba(34,197,94,.55), transparent 60%),
-        radial-gradient(160px 220px at 70% 45%, rgba(6,182,212,.40), transparent 60%),
+        radial-gradient(500px 300px at 25% 25%, rgba(44,179,74,.18), transparent 60%),
+        radial-gradient(500px 300px at 75% 35%, rgba(0,174,239,.14), transparent 60%),
         linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      display:flex;
-      align-items:flex-end;
-      padding:16px;
       position:relative;
       overflow:hidden;
     }
-    .glass__img::after{
-      content:"";
-      position:absolute; inset:-40%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.10), transparent 55%);
-      transform: rotate(10deg);
-      animation: floatGlow 10s ease-in-out infinite;
-      pointer-events:none;
-    }
-    @keyframes floatGlow{
-      0%,100%{transform: translate3d(0,0,0) rotate(10deg)}
-      50%{transform: translate3d(18px, -10px, 0) rotate(10deg)}
-    }
-    .glass__img .hint{
-      position:relative;
-      font-size:13px;
-      color:rgba(234,240,247,.85);
-      background:rgba(0,0,0,.25);
-      border:1px solid rgba(255,255,255,.14);
-      padding:10px 12px;
-      border-radius:16px;
-      max-width: 54ch;
-    }
-    .hero__fade{
-      position:absolute; left:0; right:0; bottom:-1px;
-      height:110px;
-      background: linear-gradient(180deg, transparent, var(--bg));
+    .shot::after{
+      content:"Add your project photo";
+      position:absolute;left:14px;bottom:14px;
+      font-size:12px;color:rgba(234,240,247,.75);
+      background:rgba(11,15,20,.5);
+      border:1px solid rgba(255,255,255,.12);
+      padding:8px 10px;border-radius:999px;
+      backdrop-filter: blur(10px);
     }
 
-    /* Cards */
-    .cards{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:14px;
-    }
-    .card{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      padding:16px;
-    }
-    .list{margin:10px 0 0; padding-left:18px; color:rgba(234,240,247,.88)}
-    .list li{margin:6px 0}
+    details{border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.04);padding:14px}
+    details summary{cursor:pointer;font-weight:800}
+    details p{margin:10px 0 0;color:var(--muted);line-height:1.6;font-size:14px}
 
-    /* Strip CTA */
-    .strip{
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-    }
-    .strip__inner{
-      padding:22px 0;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-
-    /* Steps */
-    .steps{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:14px;
-      padding:0;
-      margin:0;
-      list-style:none;
-    }
-    .steps li{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      padding:16px;
-    }
-    .steps p{color:rgba(234,240,247,.86)}
-
-    /* Gallery in landing */
-    .filters{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 18px}
-    .chip{
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      color:rgba(234,240,247,.92);
-      cursor:pointer;
-      font-weight:900;
-      font-size:13px;
-      transition: transform .15s ease;
-    }
-    .chip:hover{transform: translateY(-1px)}
-    .chip.is-active{
-      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(6,182,212,.85));
-      color:#061018;
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:12px;
-    }
-    .shot{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      overflow:hidden;
-      margin:0;
-      cursor:pointer;
-      transition: transform .18s ease;
-    }
-    .shot:hover{transform: translateY(-2px)}
-    .shot img{width:100%; height:180px; object-fit:cover}
-    .shot figcaption{padding:10px 12px; font-size:13px; color:rgba(234,240,247,.88)}
-
-    .lightbox{
-      position:fixed; inset:0;
-      background: rgba(0,0,0,.72);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:22px;
-      z-index:100;
-    }
-    .lightbox.is-open{display:flex}
-    .lightbox img{
-      max-width:min(980px, 100%);
-      max-height: 72vh;
-      border-radius: 18px;
-      border:1px solid rgba(255,255,255,.16);
-      box-shadow: var(--shadow);
-    }
-    .lightbox__cap{color:rgba(234,240,247,.9); margin-top:10px; text-align:center}
-    .lightbox__close{
-      position:absolute; top:16px; right:16px;
-      width:46px; height:46px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(255,255,255,.06);
-      color:#fff;
-      cursor:pointer;
-    }
-
-    /* FAQ */
-    .faq details{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      padding:14px 16px;
-      margin-bottom:10px;
-    }
-    .faq summary{cursor:pointer; font-weight:900}
-    .faq p{color:rgba(234,240,247,.86); margin-top:10px}
-
-    /* Contact */
-    .contact{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:14px;
-      align-items:start;
-    }
-    .form{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      padding:16px;
-    }
-    .form__row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
-    label{display:block; font-size:13px; color:rgba(234,240,247,.9)}
-    input, select, textarea{
+    .contact{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
+    .field{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    label{font-weight:800;font-size:13px;color:rgba(234,240,247,.92)}
+    input,select,textarea{
       width:100%;
-      margin-top:8px;
       padding:12px 12px;
       border-radius:14px;
       border:1px solid rgba(255,255,255,.14);
-      background:rgba(0,0,0,.22);
+      background:rgba(11,15,20,.55);
       color:var(--text);
       outline:none;
     }
-    input:focus, select:focus, textarea:focus{border-color: rgba(34,197,94,.55)}
-    .form__actions{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:12px}
-    .form__note{margin:0; color:var(--muted)}
-    .hr{border:none; border-top:1px solid var(--line); margin:14px 0}
-
-    /* Footer */
+    textarea{min-height:120px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:rgba(44,179,74,.55);box-shadow:0 0 0 4px rgba(44,179,74,.10)}
+    .note{
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+      display:none;
+    }
     .footer{
+      padding:26px 0 40px;
       border-top:1px solid var(--line);
-      background:rgba(0,0,0,.16);
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
     }
-    .footer__inner{
-      padding:26px 0;
-      display:grid;
-      grid-template-columns: 1fr auto;
-      gap:14px;
-      align-items:center;
-    }
-    .footer__links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
-    .footer__links a{color:rgba(234,240,247,.85)}
-    .footer__links a:hover{color:#fff}
 
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero__grid{grid-template-columns:1fr; gap:22px}
-      .cards{grid-template-columns: repeat(2, 1fr)}
-      .steps{grid-template-columns: repeat(2, 1fr)}
-      .contact{grid-template-columns:1fr}
-      .gallery{grid-template-columns: repeat(2, 1fr)}
-    }
-    @media (max-width: 720px){
-      .nav__toggle{display:inline-flex; align-items:center; justify-content:center}
-      .nav__list{
-        position:absolute; right:0; top:58px;
-        width:min(320px, calc(100vw - 32px));
-        flex-direction:column; align-items:stretch;
-        gap:10px;
-        padding:14px;
-        border-radius: 18px;
-        border:1px solid var(--line);
-        background: rgba(11,15,20,.92);
-        box-shadow: var(--shadow);
-        display:none;
-      }
-      .nav__list.is-open{display:flex}
-      .form__row{grid-template-columns:1fr}
-      .cards{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr}
+    @media (max-width: 940px){
+      .hero-grid{grid-template-columns:1fr}
+      h1{font-size:38px}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
       .gallery{grid-template-columns:1fr}
-      .shot img{height:210px}
-      .footer__inner{grid-template-columns:1fr}
-      .footer__links{justify-content:flex-start}
+      .contact{grid-template-columns:1fr}
+      .nav-links{display:none}
     }
   </style>
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo" aria-label="HiGreenWall">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          HiGreenWall
+          <div style="font-size:12px;color:var(--muted);font-weight:700;margin-top:2px;">Toronto • Living Green Walls</div>
+        </div>
+      </div>
 
-  <header class="header">
-    <div class="container header__inner">
-      <a class="logo" href="#top" aria-label="HiGreenWall home">
-        <span class="logo__mark"></span>
-        <span class="logo__text">HiGreenWall</span>
-      </a>
-
-      <nav class="nav" aria-label="Primary navigation">
-        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav__list">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Projects</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a class="btn btn--sm" href="#contact">Request a Quote</a></li>
-        </ul>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
       </nav>
+
+      <a class="btn primary" href="#contact">Get a Quote</a>
     </div>
   </header>
 
-  <main id="main">
-    <!-- HERO (SEO-focused copy without keyword stuffing) -->
-    <section class="hero" id="top">
-      <div class="container hero__grid">
-        <div class="reveal" data-delay="0">
-          <p class="pill">Toronto • GTA • Ontario</p>
-          <h1>Living Green Walls in Toronto, Built with Smart Irrigation</h1>
-          <p class="lead">
-            HiGreenWall designs, installs, and maintains indoor and outdoor living green walls, roof gardens,
-            and smart irrigation systems across Toronto and the GTA—engineered for Canada’s climate and real-world use.
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="card hero-left">
+          <div class="kicker"><span class="dot"></span> Nature engineered for modern spaces</div>
+          <h1>Living green walls, roof gardens & smart irrigation in Toronto.</h1>
+          <p class="sub">
+            We design, install, and maintain premium green walls and irrigation systems across the GTA.
+            Clean builds, reliable automation, and a maintenance plan that actually works.
           </p>
 
-          <div class="hero__cta">
-            <a class="btn" href="#contact">Request a Quote</a>
-            <a class="btn btn--ghost" href="#gallery">View Projects</a>
+          <div class="hero-cta">
+            <a class="btn primary" href="#contact">Request a Quote</a>
+            <a class="btn" href="#projects">See Projects</a>
           </div>
 
-          <div class="trust" aria-label="Highlights">
-            <div class="trust__item">
-              <strong>Premium finish</strong>
-              <span>Clean details, built right</span>
-            </div>
-            <div class="trust__item">
-              <strong>Reliable systems</strong>
-              <span>Drainage + smart control</span>
-            </div>
-            <div class="trust__item">
-              <strong>Maintenance options</strong>
-              <span>Seasonal care plans</span>
-            </div>
+          <div class="badges" aria-label="Highlights">
+            <div class="badge">Hydroponic + low-maintenance</div>
+            <div class="badge">Indoor + outdoor systems</div>
+            <div class="badge">Toronto & GTA</div>
+            <div class="badge">Maintenance plans</div>
           </div>
-
-          <p class="small" style="margin-top:12px">
-            Looking for <strong>green wall installation in Toronto</strong> or a <strong>smart irrigation upgrade</strong>? You’re in the right place.
-          </p>
         </div>
 
-        <div class="glass reveal" data-delay="120" aria-hidden="true">
-          <div class="glass__badge">Hydroponic options • Seasonal maintenance • Smart scheduling</div>
-          <div class="glass__img">
-            <div class="hint">
-              Replace with your real hero image:
-              <br><span class="small">/assets/img/hero.jpg</span>
-              <br>Tip: use a sharp, bright photo of your best indoor wall.
+        <div class="card hero-right">
+          <div class="mock">
+            <div class="label">Perfect for lobbies • offices • patios • rooftops</div>
+            <div class="grid" aria-hidden="true"></div>
+            <div class="tiles">
+              <div class="tile">
+                <b>Green Wall Design</b>
+                <span>Plant selection + irrigation layout tailored to light & climate.</span>
+              </div>
+              <div class="tile">
+                <b>Smart Irrigation</b>
+                <span>Automation, sensors, zoning, and seasonal optimization.</span>
+              </div>
+              <div class="tile">
+                <b>Maintenance</b>
+                <span>Monthly/seasonal care so your wall stays healthy and clean.</span>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
-      <div class="hero__fade"></div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section">
-      <div class="container">
-        <div class="section__head reveal" data-delay="0">
-          <h2>Services in Toronto & the GTA</h2>
-          <p>
-            We work with homeowners, architects, builders, and property managers across Ontario—focused on performance,
-            longevity, and a clean final look.
-          </p>
+    <section id="services">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <h2>Services</h2>
+            <p>From design to install to ongoing care. Choose one service or a full package.</p>
+          </div>
         </div>
 
-        <div class="cards">
-          <article class="card reveal" data-delay="0">
-            <h3>Indoor Living Green Walls</h3>
-            <ul class="list">
-              <li>Hydroponic and modular systems</li>
-              <li>Plant selection for your light & airflow</li>
-              <li>Waterproofing, drainage, clean finish</li>
-              <li>Optional maintenance plans</li>
-            </ul>
-          </article>
+        <div class="grid3">
+          <div class="card p16 feature">
+            <h3>Living Green Walls</h3>
+            <p>Indoor and outdoor living walls with irrigation built in. Clean structure, professional finish, easy maintenance.</p>
+          </div>
 
-          <article class="card reveal" data-delay="80">
-            <h3>Outdoor Green Walls (Ontario-ready)</h3>
-            <ul class="list">
-              <li>Facade, entry, patio features</li>
-              <li>Weather-aware design and drainage</li>
-              <li>Seasonal strategy for Canadian climate</li>
-              <li>Service and winter prep</li>
-            </ul>
-          </article>
-
-          <article class="card reveal" data-delay="160">
+          <div class="card p16 feature">
             <h3>Smart Irrigation Systems</h3>
-            <ul class="list">
-              <li>Zoning, pressure-balanced design</li>
-              <li>Smart controllers, timers, sensors</li>
-              <li>Water-efficient optimization</li>
-              <li>Repairs, troubleshooting, upgrades</li>
-            </ul>
-          </article>
+            <p>Design + install sprinklers, drip, controllers, zones, and winterization plans across Toronto & the GTA.</p>
+          </div>
 
-          <article class="card reveal" data-delay="240">
+          <div class="card p16 feature">
             <h3>Roof Gardens</h3>
-            <ul class="list">
-              <li>Green roof irrigation integration</li>
-              <li>Drainage + growing media guidance</li>
-              <li>Planting + seasonal approach</li>
-              <li>Maintenance and inspections</li>
-            </ul>
-          </article>
+            <p>Green roofs and rooftop planters with proper drainage + irrigation. Built for Toronto weather.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- STRIP CTA -->
-    <section class="strip" aria-label="Call to action">
-      <div class="container strip__inner reveal" data-delay="0">
-        <div>
-          <h2>High impact. Low headaches.</h2>
-          <p class="small">A living wall should feel effortless. We build it that way.</p>
-        </div>
-        <a class="btn" href="#contact">Book a Free Consultation</a>
-      </div>
-    </section>
-
-    <!-- GALLERY (inside landing page) -->
-    <section id="gallery" class="section section--soft">
-      <div class="container">
-        <div class="section__head reveal" data-delay="0">
-          <h2>Project Gallery</h2>
-          <p>
-            Real projects across Toronto & the GTA. Swap the placeholders below with your best photos.
-            (This section alone usually boosts leads.)
-          </p>
+    <section>
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <h2>Why HiGreenWall</h2>
+            <p>Fewer problems after install. Your space stays green, not stressed.</p>
+          </div>
         </div>
 
-        <div class="filters reveal" data-delay="80" role="tablist" aria-label="Project filters">
-          <button class="chip is-active" data-filter="all" type="button">All</button>
-          <button class="chip" data-filter="indoor" type="button">Indoor</button>
-          <button class="chip" data-filter="outdoor" type="button">Outdoor</button>
-          <button class="chip" data-filter="commercial" type="button">Commercial</button>
-          <button class="chip" data-filter="residential" type="button">Residential</button>
-          <button class="chip" data-filter="irrigation" type="button">Smart Irrigation</button>
-          <button class="chip" data-filter="roof" type="button">Roof Gardens</button>
-        </div>
-
-        <div class="gallery" id="galleryGrid">
-          <!-- Replace src with your real photos -->
-          <figure class="shot reveal" data-delay="0" data-cat="indoor commercial">
-            <img src="/assets/img/projects/indoor-1.jpg" alt="Indoor living green wall installation in Toronto" loading="lazy" />
-            <figcaption>Indoor Living Wall • Commercial</figcaption>
-          </figure>
-
-          <figure class="shot reveal" data-delay="60" data-cat="indoor residential">
-            <img src="/assets/img/projects/indoor-2.jpg" alt="Indoor living wall feature for a residential space in Toronto" loading="lazy" />
-            <figcaption>Indoor Living Wall • Residential</figcaption>
-          </figure>
-
-          <figure class="shot reveal" data-delay="120" data-cat="outdoor residential">
-            <img src="/assets/img/projects/outdoor-1.jpg" alt="Outdoor living green wall in the GTA" loading="lazy" />
-            <figcaption>Outdoor Green Wall • Residential</figcaption>
-          </figure>
-
-          <figure class="shot reveal" data-delay="180" data-cat="outdoor commercial">
-            <img src="/assets/img/projects/outdoor-2.jpg" alt="Outdoor green wall feature for a commercial building in Toronto" loading="lazy" />
-            <figcaption>Outdoor Green Wall • Commercial</figcaption>
-          </figure>
-
-          <figure class="shot reveal" data-delay="240" data-cat="irrigation commercial">
-            <img src="/assets/img/projects/irrigation-1.jpg" alt="Smart irrigation zoning and controller upgrade in Ontario" loading="lazy" />
-            <figcaption>Smart Irrigation • Commercial</figcaption>
-          </figure>
-
-          <figure class="shot reveal" data-delay="300" data-cat="irrigation residential">
-            <img src="/assets/img/projects/irrigation-2.jpg" alt="Smart irrigation system upgrade for a residential landscape in Toronto" loading="lazy" />
-            <figcaption>Smart Irrigation • Residential</figcaption>
-          </figure>
-
-          <figure class="shot reveal" data-delay="360" data-cat="roof residential">
-            <img src="/assets/img/projects/roof-1.jpg" alt="Roof garden system with irrigation integration in Toronto" loading="lazy" />
-            <figcaption>Roof Garden • Residential</figcaption>
-          </figure>
-
-          <figure class="shot reveal" data-delay="420" data-cat="roof commercial">
-            <img src="/assets/img/projects/roof-2.jpg" alt="Commercial roof garden and planting system in Toronto" loading="lazy" />
-            <figcaption>Roof Garden • Commercial</figcaption>
-          </figure>
+        <div class="grid2">
+          <div class="card p16 feature">
+            <h3>Design that matches real conditions</h3>
+            <p>We plan around light, airflow, humidity, and seasonality. No guesswork, no plant chaos.</p>
+          </div>
+          <div class="card p16 feature">
+            <h3>Automation that you can trust</h3>
+            <p>Correct zones, stable pressure, clean lines, and controls that are easy to operate.</p>
+          </div>
+          <div class="card p16 feature">
+            <h3>Maintenance that protects your investment</h3>
+            <p>Scheduled care, trimming, nutrient checks, pests prevention, and seasonal system tuning.</p>
+          </div>
+          <div class="card p16 feature">
+            <h3>Fast quoting, clear scope</h3>
+            <p>We ask the right questions, quote quickly, and keep scope crystal clear.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section id="process" class="section">
-      <div class="container">
-        <div class="section__head reveal" data-delay="0">
-          <h2>Our process</h2>
-          <p>Clear steps, clean scope, predictable delivery—especially important for commercial timelines.</p>
+    <section id="projects">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <h2>Projects</h2>
+            <p>Replace placeholders with your real photos (you’ll just drop them into assets and update CSS).</p>
+          </div>
+          <a class="btn" href="#contact">Get pricing</a>
         </div>
 
-        <ol class="steps">
-          <li class="reveal" data-delay="0">
-            <h3>1) Quick call + photos</h3>
-            <p>We learn your goals, confirm measurements, and identify constraints early.</p>
-          </li>
-          <li class="reveal" data-delay="80">
-            <h3>2) Design + proposal</h3>
-            <p>System type, plant strategy, irrigation plan, timeline, and price—no guessing.</p>
-          </li>
-          <li class="reveal" data-delay="160">
-            <h3>3) Install + commissioning</h3>
-            <p>Proper structure, waterproofing, drainage, and tested irrigation zones.</p>
-          </li>
-          <li class="reveal" data-delay="240">
-            <h3>4) Maintenance (optional)</h3>
-            <p>Seasonal visits to keep plants thriving and the system stable.</p>
-          </li>
-        </ol>
-
-        <p class="small reveal" data-delay="320" style="margin-top:14px">
-          Tip for SEO: Add 6–12 real photos with Toronto/GTA alt text (like above). It helps both Google and AI search.
-        </p>
+        <div class="gallery">
+          <div class="shot" aria-label="Project placeholder 1"></div>
+          <div class="shot" aria-label="Project placeholder 2"></div>
+          <div class="shot" aria-label="Project placeholder 3"></div>
+          <div class="shot" aria-label="Project placeholder 4"></div>
+          <div class="shot" aria-label="Project placeholder 5"></div>
+          <div class="shot" aria-label="Project placeholder 6"></div>
+        </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="section">
-      <div class="container">
-        <div class="section__head reveal" data-delay="0">
-          <h2>FAQ</h2>
-          <p>Common questions about living green walls and irrigation projects in Toronto.</p>
+    <section id="process">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <h2>How we work</h2>
+            <p>Short, clean process. No messy surprises.</p>
+          </div>
         </div>
 
-        <div class="faq">
-          <details class="reveal" data-delay="0">
-            <summary>How much maintenance does a living green wall need?</summary>
-            <p>
-              It depends on the system, plant mix, and location. We design for low maintenance and can offer seasonal care.
-              For indoor green walls, most owners prefer a simple scheduled plan.
-            </p>
+        <div class="grid3">
+          <div class="card p16 feature">
+            <h3>1) Quick assessment</h3>
+            <p>Photos + measurements + goals. We confirm location, light, irrigation, and timeline.</p>
+          </div>
+          <div class="card p16 feature">
+            <h3>2) Design + quote</h3>
+            <p>Layout, plant palette, irrigation plan, and a clear quote with scope and timeline.</p>
+          </div>
+          <div class="card p16 feature">
+            <h3>3) Install + maintenance</h3>
+            <p>Professional install and optional monthly/seasonal plan to keep everything healthy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <h2>FAQ</h2>
+            <p>Quick answers clients ask in Toronto before they move forward.</p>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <details>
+            <summary>How much does a living green wall cost?</summary>
+            <p>It depends on size, system type, plant selection, and access. Send dimensions or photos and we’ll quote quickly.</p>
           </details>
-
-          <details class="reveal" data-delay="60">
-            <summary>Can you install in condos and commercial buildings?</summary>
-            <p>Yes. We coordinate with property management for access, timing, and building requirements.</p>
+          <details>
+            <summary>Do you offer maintenance?</summary>
+            <p>Yes. We offer monthly and seasonal plans: trimming, nutrients, irrigation checks, pests prevention, and system tuning.</p>
           </details>
-
-          <details class="reveal" data-delay="120">
-            <summary>Do you offer smart controllers and sensors for irrigation?</summary>
-            <p>Yes. We can integrate smart scheduling and sensor logic based on your site and planting needs.</p>
+          <details>
+            <summary>Can you do outdoor systems in Toronto winter?</summary>
+            <p>Yes, with the right design and seasonal plan. Outdoor irrigation needs winterization and spring startup.</p>
           </details>
-
-          <details class="reveal" data-delay="180">
-            <summary>Do you work outside Toronto?</summary>
-            <p>Yes—across the GTA and Ontario depending on project scope.</p>
+          <details>
+            <summary>How fast can you start?</summary>
+            <p>We can assess quickly. Install timing depends on scope and materials. Message us and we’ll give a realistic timeline.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section section--soft">
-      <div class="container">
-        <div class="section__head reveal" data-delay="0">
-          <h2>Request a quote</h2>
-          <p>Tell us what you’re building. We’ll respond with next steps and a clear plan.</p>
+    <section id="contact">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <h2>Request a quote</h2>
+            <p>Fill the form and your email app will open with all details ready to send.</p>
+          </div>
         </div>
 
         <div class="contact">
-          <form class="form reveal" data-delay="60" id="contactForm" novalidate>
-            <div class="form__row">
-              <label>
-                Full name
-                <input name="name" autocomplete="name" required minlength="2" />
-              </label>
-              <label>
-                Email
-                <input name="email" type="email" autocomplete="email" required />
-              </label>
-            </div>
+          <div class="card p16">
+            <h3 style="margin:0 0 10px">Contact form</h3>
+            <form id="leadForm" novalidate>
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" placeholder="Your name" required />
+              </div>
 
-            <div class="form__row">
-              <label>
-                Phone (optional)
-                <input name="phone" autocomplete="tel" />
-              </label>
-              <label>
-                Project type
-                <select name="projectType" required>
-                  <option value="" selected disabled>Select…</option>
-                  <option>Indoor Living Green Wall</option>
-                  <option>Outdoor Green Wall</option>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" required />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" placeholder="(416) ..." />
+              </div>
+
+              <div class="field">
+                <label for="projectType">Project type</label>
+                <select id="projectType" name="projectType" required>
+                  <option value="">Select one</option>
+                  <option>Living Green Wall (Indoor)</option>
+                  <option>Living Green Wall (Outdoor)</option>
                   <option>Smart Irrigation</option>
                   <option>Roof Garden</option>
-                  <option>Other</option>
+                  <option>Maintenance / Service</option>
                 </select>
-              </label>
-            </div>
+              </div>
 
-            <label>
-              Message
-              <textarea name="message" rows="5" required minlength="10" placeholder="Location (Toronto/GTA), size, timeline, and a link to photos if you have them"></textarea>
-            </label>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Size, location (Toronto/GTA), timeline, photos link if you have..." required></textarea>
+              </div>
 
-            <div class="form__actions">
-              <button class="btn" type="submit">Send request</button>
-              <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
-            </div>
+              <button class="btn primary" type="submit">Open email to send</button>
+              <div id="note" class="note" role="status" aria-live="polite"></div>
+            </form>
+          </div>
 
-            <p class="small" style="margin-top:10px">
-              Prefer email? <strong>Ardeshiradiban@outlook.com</strong>
+          <div class="card p16">
+            <h3 style="margin:0 0 10px">Or contact directly</h3>
+            <p style="margin:0 0 12px;color:var(--muted);line-height:1.6">
+              Want a faster quote? Send photos + dimensions and we’ll respond quickly.
             </p>
-          </form>
 
-          <aside class="card reveal" data-delay="140">
-            <h3>Service area</h3>
-            <p>Toronto • GTA • Ontario</p>
-            <hr class="hr" />
-            <h3>Fastest quote</h3>
-            <p class="small">Include location, photos, approximate size, and timeline.</p>
-            <hr class="hr" />
-            <h3>What you’ll receive</h3>
-            <ul class="list">
-              <li>Recommended system type</li>
-              <li>Plant strategy (light-aware)</li>
-              <li>Irrigation approach</li>
-              <li>Timeline + budget range</li>
-            </ul>
-          </aside>
+            <div style="display:grid;gap:10px">
+              <div class="badge" style="justify-content:space-between">
+                <span>Email</span><b style="color:var(--text)">ardeshiradiban@outlook.com</b>
+              </div>
+              <div class="badge" style="justify-content:space-between">
+                <span>Service area</span><b style="color:var(--text)">Toronto & GTA</b>
+              </div>
+              <div class="badge" style="justify-content:space-between">
+                <span>Hours</span><b style="color:var(--text)">Mon–Sat</b>
+              </div>
+            </div>
+
+            <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+              <a class="btn" href="#projects">Projects</a>
+              <a class="btn" href="#services">Services</a>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
+
+    <div class="footer">
+      <div class="wrap" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap">
+        <div>© <span id="y"></span> HiGreenWall • Toronto, ON</div>
+        <div style="opacity:.9">Living green walls • Roof gardens • Smart irrigation</div>
+      </div>
+    </div>
   </main>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
-    <button class="lightbox__close" id="lightboxClose" aria-label="Close preview">✕</button>
-    <div>
-      <img id="lightboxImg" alt="" />
-      <p class="lightbox__cap" id="lightboxCap"></p>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div>
-        <strong>HiGreenWall</strong>
-        <p class="small">Living Green Walls • Roof Gardens • Smart Irrigation • Toronto</p>
-      </div>
-      <div class="footer__links">
-        <a href="#services">Services</a>
-        <a href="#gallery">Projects</a>
-        <a href="#contact">Request a Quote</a>
-      </div>
-      <p class="small">© <span id="y"></span> HiGreenWall. All rights reserved.</p>
-    </div>
-  </footer>
-
   <script>
-    // Mobile nav
-    (function(){
-      const toggle = document.querySelector(".nav__toggle");
-      const list = document.querySelector(".nav__list");
-      if (toggle && list) {
-        toggle.addEventListener("click", () => {
-          const open = list.classList.toggle("is-open");
-          toggle.setAttribute("aria-expanded", String(open));
-        });
-        list.addEventListener("click", (e) => {
-          if (e.target && e.target.tagName === "A") {
-            list.classList.remove("is-open");
-            toggle.setAttribute("aria-expanded", "false");
-          }
-        });
-      }
-      const y = document.getElementById("y");
-      if (y) y.textContent = new Date().getFullYear();
-    })();
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Subtle reveal animations (IntersectionObserver)
-    (function(){
-      const els = document.querySelectorAll(".reveal");
-      if (!("IntersectionObserver" in window) || !els.length) {
-        els.forEach(el => el.classList.add("is-in"));
-        return;
-      }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            const d = Number(el.getAttribute("data-delay") || "0");
-            el.style.transitionDelay = (d/1000) + "s";
-            el.classList.add("is-in");
-            io.unobserve(el);
-          }
-        });
-      }, { threshold: 0.12 });
-      els.forEach(el => io.observe(el));
-    })();
-
-    // Gallery filter + lightbox
-    (function(){
-      const chips = Array.from(document.querySelectorAll(".chip"));
-      const shots = Array.from(document.querySelectorAll(".shot"));
-
-      function setActive(btn){
-        chips.forEach(c => c.classList.remove("is-active"));
-        btn.classList.add("is-active");
-      }
-      function applyFilter(filter){
-        shots.forEach(s => {
-          const cats = (s.getAttribute("data-cat") || "").split(/\s+/).filter(Boolean);
-          const show = filter === "all" ? true : cats.includes(filter);
-          s.style.display = show ? "" : "none";
-        });
-      }
-      chips.forEach(btn => btn.addEventListener("click", () => {
-        setActive(btn);
-        applyFilter(btn.dataset.filter);
-      }));
-
-      const lb = document.getElementById("lightbox");
-      const lbImg = document.getElementById("lightboxImg");
-      const lbCap = document.getElementById("lightboxCap");
-      const lbClose = document.getElementById("lightboxClose");
-
-      function open(fig){
-        const img = fig.querySelector("img");
-        const cap = fig.querySelector("figcaption");
-        if (!img || !lb || !lbImg) return;
-        lbImg.src = img.src;
-        lbImg.alt = img.alt || "";
-        if (lbCap) lbCap.textContent = cap ? cap.textContent : "";
-        lb.classList.add("is-open");
-        lb.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      }
-      function close(){
-        if (!lb) return;
-        lb.classList.remove("is-open");
-        lb.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-        if (lbImg) lbImg.src = "";
-      }
-
-      shots.forEach(fig => fig.addEventListener("click", () => open(fig)));
-      if (lbClose) lbClose.addEventListener("click", close);
-      if (lb) lb.addEventListener("click", (e) => { if (e.target === lb) close(); });
-      document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
-    })();
-
-    //<!-- Contact form submit (Azure Static Web Apps API first, then mailto fallback) -->
-<script>
-(() => {
-  const form = document.getElementById("contactForm");
-  const note = document.getElementById("formNote");
-
-  function setNote(msg, ok = true) {
-    if (!note) return;
-    note.textContent = msg;
-    note.style.color = ok ? "rgba(234,240,247,.86)" : "rgba(255,180,180,.95)";
-  }
-
-  function mailtoFallback(payload) {
-  const to = "Ardeshiradiban@outlook.com";
-  const subject = encodeURIComponent("New HiGreenWall Lead");
-
-  const body = encodeURIComponent(
-    `Name: ${payload.name || ""}\n` +
-    `Email: ${payload.email || ""}\n` +
-    `Phone: ${payload.phone || ""}\n` +
-    `Project Type: ${payload.projectType || ""}\n\n` +
-    `Message:\n${payload.message || ""}`
-  );
-
-  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-}
-
-}
-  if (!form) return;
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const fd = new FormData(form);
-    const payload = Object.fromEntries(fd.entries());
-
-    if (!payload.name || String(payload.name).trim().length < 2) return setNote("Please enter your full name.", false);
-    if (!payload.email || !String(payload.email).includes("@")) return setNote("Please enter a valid email.", false);
-    if (!payload.projectType) return setNote("Please select a project type.", false);
-    if (!payload.message || String(payload.message).trim().length < 10) return setNote("Please write a short message (min 10 chars).", false);
-
-    setNote("Sending...");
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      if (!res.ok) throw new Error("API failed");
-      form.reset();
-      setNote("Thanks! Your request has been sent. We'll reply soon.");
-    } catch (err) {
-      setNote("Couldn't send automatically. Opening your email app...", false);
-      mailtoFallback(payload);
+    const note = document.getElementById("note");
+    function setNote(msg, ok = true) {
+      note.style.display = "block";
+      note.textContent = msg;
+      note.style.borderColor = ok ? "rgba(44,179,74,.35)" : "rgba(255,180,180,.35)";
+      note.style.color = ok ? "rgba(234,240,247,.92)" : "rgba(255,210,210,.95)";
+      note.style.background = ok ? "rgba(44,179,74,.08)" : "rgba(255,120,120,.08)";
     }
-  });
-})();
-</script>
-  </body>
+
+    function mailtoFallback(payload) {
+      const to = "ardeshiradiban@outlook.com";
+      const subject = encodeURIComponent("New HiGreenWall Lead");
+      const body = encodeURIComponent(
+        `Name: ${payload.name || ""}\n` +
+        `Email: ${payload.email || ""}\n` +
+        `Phone: ${payload.phone || ""}\n` +
+        `Project Type: ${payload.projectType || ""}\n\n` +
+        `Message:\n${payload.message || ""}`
+      );
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    }
+
+    const form = document.getElementById("leadForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+
+      if (!payload.name || String(payload.name).trim().length < 2) return setNote("Please enter your full name.", false);
+      if (!payload.email || !String(payload.email).includes("@")) return setNote("Please enter a valid email.", false);
+      if (!payload.projectType) return setNote("Please select a project type.", false);
+      if (!payload.message || String(payload.message).trim().length < 10) return setNote("Please write a short message.", false);
+
+      setNote("Opening your email app...");
+      mailtoFallback(payload);
+      form.reset();
+    });
+  </script>
+
+  <noscript>
+    JavaScript is disabled. Please enable JavaScript and refresh the page.
+  </noscript>
+</body>
 </html>
